@@ -1,13 +1,16 @@
 ---
 import  Card  from '../components/Card.astro';
 import Layout from '../layouts/Layout.astro';
+import Base from '../layouts/Base.astro';
+import Header from '../components/Header.astro'
 
 ---
 
-<Layout title='Saludos desde astro'>
+<Base title='Saludos desde astro'>
+	<Header title="Test in Astro"/>
 	<Card link="hellothere" title="Hello Astro" time="2024-0" tags="typescript" />
-	<Card link="hellothere" title="Hello Olivia" time="2024-0" tags="typescript" />
-</Layout>
+	<Card link="hellothere" title="Hello Tailwind" time="2024-0" tags="typescript" />
+</Base>
 
 
 
