@@ -1,11 +1,11 @@
 ---
-title: "Introducción a Git"
+title: "Hello World"
 pubDate: "2024-05-07"
-description: "La Guía Esencial para Principiantes"
+description: "Hello this is my first recommendation"
 image: "https://images.unsplash.com/photo-1660208030414-8461e1cc68da"
 tags: ["astro","javascript"]
-layout: "../layouts/Base.astro"
 ---
+
 
 # Introducción a Git: La Guía Esencial para Principiantes
 

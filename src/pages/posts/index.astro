@@ -1,0 +1,32 @@
+---
+import Card from "../../components/Card.astro";
+import Layout from "../../layouts/Layout.astro";
+import Base from "../../layouts/Base.astro";
+import Header from "../../components/Header.astro";
+import { getCollection } from "astro:content";
+
+const posts = (await getCollection("tips")).sort(
+    (a, b) => a.data.pubDate.valueOf() - b.data.pubDate.valueOf()
+);
+
+console.log(posts);
+
+---
+
+<Base title="Saludos desde astro">
+  <Header title="Test in Astro" />
+  <ul role="list" class="link-card-grid">
+    {
+      posts.map((post) => (
+        <li>
+          <Card            
+            title={post.data.title}
+            time={post.data.pubDate}
+            tags={post.data.tags}
+            slug={post.slug}
+          />
+        </li>
+      ))
+    }
+  </ul>
+</Base>
